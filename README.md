@@ -147,7 +147,3 @@ Este projeto está sob a licença MIT. Veja o arquivo [LICENSE](LICENSE) para ma
 3. Commit suas mudanças (`git commit -m 'Add some AmazingFeature'`)
 4. Push para a branch (`git push origin feature/AmazingFeature`)
 5. Abra um Pull Request
-
-## 📞 Suporte
-
-Para suporte, envie um email para seu-email@exemplo.com ou abra uma issue no repositório. 
