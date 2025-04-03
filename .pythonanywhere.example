@@ -1,0 +1,7 @@
+# Configurações do PythonAnywhere - EXEMPLO
+# Renomeie este arquivo para .pythonanywhere e substitua os valores
+
+PYTHON_VERSION = "3.11"
+VIRTUAL_ENV = "/home/seu-usuario/.virtualenvs/N1_ia"  # Substitua 'seu-usuario' pelo seu nome de usuário
+WORKING_DIR = "/home/seu-usuario/N1_ia"  # Substitua 'seu-usuario' pelo seu nome de usuário
+WSGI_FILE = "/var/www/seu-usuario_pythonanywhere_com_wsgi.py"  # Substitua 'seu-usuario' pelo seu nome de usuário 

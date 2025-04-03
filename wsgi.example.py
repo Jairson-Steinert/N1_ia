@@ -2,7 +2,7 @@ import os
 import sys
 
 # Configurar ambiente virtual
-VIRTUALENV = '/home/seu-usuario/.virtualenvs/N1_ia'
+VIRTUALENV = '/home/seu-usuario/.virtualenvs/N1_ia'  # Substitua 'seu-usuario' pelo seu nome de usuário
 python_home = VIRTUALENV
 python_version = '3.11'
 
@@ -16,9 +16,9 @@ for prefix in prefixes:
                 sys.path.insert(0, path)
 
 # Adicionar diretório do projeto ao path
-project_home = '/home/seu-usuario/N1_ia/N1_ia'
+project_home = '/home/seu-usuario/N1_ia'  # Substitua 'seu-usuario' pelo seu nome de usuário
 if project_home not in sys.path:
     sys.path.insert(0, project_home)
 
 # Importar a aplicação Flask
-from app import app as application
+from app import app as application 

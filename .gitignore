@@ -43,3 +43,53 @@ Thumbs.db
 
 # Logs
 *.log 
+
+# Virtual environment
+.venv/
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Local development settings
+.env
+.env.local
+*.local
+
+# PythonAnywhere specific
+.pythonanywhere
+wsgi.py
+*.pyc
+.Python
+*.pyo
+*.pyd
+.Python
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Logs
+*.log
+logs/
+log/
+
+# Database
+*.db
+*.sqlite3
+
+# Environment variables
+.env*
+!.env.example
+
+# Cache
+.cache/
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Temporary files
+*.bak
+*.tmp
+*~
+.DS_Store 
