@@ -62,6 +62,21 @@ source venv/bin/activate
 pip install -r requirements.txt
 ```
 
+4. Configure os arquivos de ambiente:
+   - Copie `.pythonanywhere.example` para `.pythonanywhere`
+   - Copie `wsgi.example.py` para `wsgi.py`
+   - Edite ambos os arquivos substituindo `seu-usuario` pelo seu nome de usuário
+
+5. Execute o aplicativo localmente:
+```bash
+python app.py
+```
+
+6. Acesse o sistema no navegador:
+```
+http://localhost:5000
+```
+
 As dependências incluem:
 - Flask==3.0.2
 - Werkzeug==3.0.1
@@ -70,16 +85,9 @@ As dependências incluem:
 - Pandas==2.2.1
 - python-dotenv==1.0.1
 - Gunicorn==21.2.0
-
-4. Execute o aplicativo localmente:
-```bash
-python app.py
-```
-
-5. Acesse o sistema no navegador:
-```
-http://localhost:5000
-```
+- packaging==24.0
+- networkx==3.2.1
+- decorator==5.1.1
 
 **Nota**: Se encontrar algum erro durante a instalação das dependências, certifique-se de que:
 - Python 3.11 ou superior está instalado
@@ -164,9 +172,14 @@ cd /home/Jairson/N1_ia
 git pull origin main
 ```
 
-3. Na interface web do PythonAnywhere:
-- Acesse a seção "Web"
-- Clique no botão "Reload" para aplicar as alterações
+3. Configure os arquivos de ambiente (primeira vez apenas):
+   - Copie `.pythonanywhere.example` para `.pythonanywhere`
+   - Copie `wsgi.example.py` para `wsgi.py`
+   - Edite os arquivos com suas configurações específicas do PythonAnywhere
+
+4. Na interface web do PythonAnywhere:
+   - Acesse a seção "Web"
+   - Clique no botão "Reload" para aplicar as alterações
 
 ## 📝 Licença
 
