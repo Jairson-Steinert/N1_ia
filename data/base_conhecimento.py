@@ -1,4 +1,4 @@
-from models.curso_frame import CursoFrame
+from models.frame import CursoFrame
 
 def criar_base_conhecimento():
     cursos = [
