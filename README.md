@@ -15,7 +15,7 @@ Um sistema inteligente que recomenda cursos baseado nas preferências, habilidad
 
 ## 🛠️ Tecnologias Utilizadas
 
-- Python
+- Python 3.8+
 - Flask
 - Lógica Fuzzy
 - Sistema Especialista
@@ -33,8 +33,7 @@ Um sistema inteligente que recomenda cursos baseado nas preferências, habilidad
 
 1. Clone o repositório:
 ```bash
-git clone https://github.com/Jairson-Steinert/N1_ia.git
-
+git clone https://github.com/seu-usuario/sistema-recomendacao-cursos.git
 cd sistema-recomendacao-cursos
 ```
 
@@ -62,6 +61,7 @@ As dependências incluem:
 - Pandas 2.2.1 - Manipulação de dados
 - python-dotenv 1.0.1 - Variáveis de ambiente
 - Gunicorn 21.2.0 - Servidor WSGI
+- scikit-learn 1.4.1 - Machine Learning
 
 4. Execute o aplicativo:
 ```bash
@@ -77,7 +77,7 @@ http://localhost:5000
 - Python 3.8 ou superior está instalado
 - pip está atualizado (`pip install --upgrade pip`)
 - Em sistemas Windows, você pode precisar instalar o Visual C++ Build Tools
-- Para instalar as depedências (`pip install -r requirements.txt`)
+
 ## 🎯 Como Usar
 
 1. **Seleção de Áreas de Conhecimento**
@@ -108,8 +108,10 @@ sistema-recomendacao-cursos/
 ├── requirements.txt
 ├── README.md
 ├── static/
-│   └── css/
-│       └── style.css
+│   ├── css/
+│   │   └── style.css
+│   └── js/
+│       └── main.js
 ├── templates/
 │   └── index.html
 ├── models/

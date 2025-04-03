@@ -29,6 +29,8 @@ def recommend():
     selected_habilidades = data.get('habilidades', [])
     selected_competencias = data.get('competencias', [])
     
+    print(f"Seleções recebidas: areas={selected_areas}, habilidades={selected_habilidades}, competencias={selected_competencias}")
+    
     # Cria o frame do usuário
     user_frame = course_frame.create_user_frame(
         areas=selected_areas,
@@ -38,6 +40,7 @@ def recommend():
     
     # Obtém todos os cursos
     courses = course_db.get_all_courses()
+    print(f"Total de cursos disponíveis: {len(courses)}")
     
     # Calcula a similaridade para cada curso
     recommendations = []
@@ -51,6 +54,8 @@ def recommend():
         adjusted_similarity = expert_system.apply_rules(similarity)
         recommendation_level = expert_system.get_recommendation_level(adjusted_similarity)
         
+        print(f"Curso: {course['nome']}, Similaridade: {similarity:.2f}, Ajustada: {adjusted_similarity:.2f}, Nível: {recommendation_level}")
+        
         # Adiciona a recomendação apenas se houver alguma similaridade
         if adjusted_similarity > 0:
             recommendations.append({
@@ -62,6 +67,8 @@ def recommend():
                 'habilidades': course['habilidades'],
                 'competencias': course['competencias']
             })
+    
+    print(f"Total de recomendações geradas: {len(recommendations)}")
     
     # Ordena as recomendações por similaridade
     recommendations.sort(key=lambda x: x['similaridade'], reverse=True)

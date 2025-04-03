@@ -69,14 +69,16 @@ class FuzzyLogic:
         # Calcula similaridade base
         similarity = len(intersection) / len(union)
         
-        # Aplica inferência fuzzy
-        similarity_level = fuzz.interp_membership(
-            self.universe,
-            self.similarity['high'].mf,
-            similarity
-        )
+        # Aplica inferência fuzzy para todos os níveis
+        low_level = fuzz.interp_membership(self.universe, self.similarity['low'].mf, similarity)
+        medium_level = fuzz.interp_membership(self.universe, self.similarity['medium'].mf, similarity)
+        high_level = fuzz.interp_membership(self.universe, self.similarity['high'].mf, similarity)
         
-        return similarity_level
+        # Calcula a média ponderada dos níveis
+        weighted_sum = (low_level * 0.2 + medium_level * 0.5 + high_level * 0.8)
+        total_weight = low_level + medium_level + high_level
+        
+        return weighted_sum / total_weight if total_weight > 0 else 0.0
 
     def _fuzzy_weighted_average(self, similarities):
         # Calcula a média ponderada usando operador fuzzy

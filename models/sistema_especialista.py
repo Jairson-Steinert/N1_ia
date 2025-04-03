@@ -3,20 +3,20 @@ class ExpertSystem:
         # Regras para ajuste de similaridade
         self.rules = {
             'high': {
-                'threshold': 0.7,
-                'boost': 1.2  # Aumenta em 20% para alta similaridade
+                'threshold': 0.5,  # Reduzido de 0.7
+                'boost': 1.1  # Reduzido de 1.2
             },
             'medium': {
-                'threshold': 0.4,
-                'boost': 1.1  # Aumenta em 10% para média similaridade
+                'threshold': 0.3,  # Reduzido de 0.4
+                'boost': 1.05  # Reduzido de 1.1
             },
             'low': {
-                'threshold': 0.2,
-                'boost': 1.0  # Sem boost para baixa similaridade
+                'threshold': 0.1,  # Reduzido de 0.2
+                'boost': 1.0
             },
             'none': {
                 'threshold': 0.0,
-                'boost': 1.0  # Sem boost para nenhuma similaridade
+                'boost': 1.0
             }
         }
 
