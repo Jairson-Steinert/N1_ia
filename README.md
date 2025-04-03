@@ -12,10 +12,18 @@ Um sistema inteligente que recomenda cursos baseado nas preferências, habilidad
 - Sistema de progresso visual
 - Validação de seleções
 - Opção de reiniciar o processo
+- Disponível online através do PythonAnywhere
+
+## 🌐 Acesso Online
+
+O sistema está disponível online através do PythonAnywhere:
+```
+https://jairson.pythonanywhere.com
+```
 
 ## 🛠️ Tecnologias Utilizadas
 
-- Python 3.8+
+- Python 3.11
 - Flask
 - Lógica Fuzzy
 - Sistema Especialista
@@ -23,18 +31,19 @@ Um sistema inteligente que recomenda cursos baseado nas preferências, habilidad
 - CSS3
 - JavaScript
 - Bootstrap 5
+- PythonAnywhere (Hosting)
 
 ## 📋 Pré-requisitos
 
-- Python 3.8 ou superior
+- Python 3.11 ou superior
 - pip (gerenciador de pacotes Python)
 
 ## 🔧 Instalação
 
 1. Clone o repositório:
 ```bash
-git clone https://github.com/seu-usuario/sistema-recomendacao-cursos.git
-cd sistema-recomendacao-cursos
+git clone https://github.com/Jairson-Steinert/N1_ia.git
+cd N1_ia
 ```
 
 2. Crie um ambiente virtual (recomendado):
@@ -54,16 +63,15 @@ pip install -r requirements.txt
 ```
 
 As dependências incluem:
-- Flask 3.0.2 - Framework web
-- Werkzeug 3.0.1 - Utilitários WSGI
-- NumPy 1.26.4 - Computação numérica
-- scikit-fuzzy 0.4.2 - Lógica fuzzy
-- Pandas 2.2.1 - Manipulação de dados
-- python-dotenv 1.0.1 - Variáveis de ambiente
-- Gunicorn 21.2.0 - Servidor WSGI
-- scikit-learn 1.4.1 - Machine Learning
+- Flask==3.0.2
+- Werkzeug==3.0.1
+- NumPy==1.26.4
+- scikit-fuzzy==0.4.2
+- Pandas==2.2.1
+- python-dotenv==1.0.1
+- Gunicorn==21.2.0
 
-4. Execute o aplicativo:
+4. Execute o aplicativo localmente:
 ```bash
 python app.py
 ```
@@ -74,7 +82,7 @@ http://localhost:5000
 ```
 
 **Nota**: Se encontrar algum erro durante a instalação das dependências, certifique-se de que:
-- Python 3.8 ou superior está instalado
+- Python 3.11 ou superior está instalado
 - pip está atualizado (`pip install --upgrade pip`)
 - Em sistemas Windows, você pode precisar instalar o Visual C++ Build Tools
 
@@ -103,7 +111,7 @@ http://localhost:5000
 ## 🏗️ Estrutura do Projeto
 
 ```
-sistema-recomendacao-cursos/
+N1_ia/
 ├── app.py
 ├── requirements.txt
 ├── README.md
@@ -138,6 +146,27 @@ O sistema utiliza uma combinação de:
 3. **Frame Semântico**
    - Estrutura as informações do usuário e dos cursos
    - Facilita a comparação e recomendação
+
+## 📦 Deploy
+
+O sistema está hospedado no PythonAnywhere. Para fazer deploy de atualizações:
+
+1. Push das alterações para o GitHub:
+```bash
+git add .
+git commit -m "Descrição das alterações"
+git push origin main
+```
+
+2. No console do PythonAnywhere:
+```bash
+cd /home/Jairson/N1_ia
+git pull origin main
+```
+
+3. Na interface web do PythonAnywhere:
+- Acesse a seção "Web"
+- Clique no botão "Reload" para aplicar as alterações
 
 ## 📝 Licença
 
